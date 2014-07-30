@@ -9,7 +9,6 @@ alias hosts='~/edithosts.sh'
 alias load='open -g'
 
 alias cp='cp -i'
-alias rm='rm -i'
 alias mv='mv -i'
 
 #pattern: replace 's/search/replace/g;' *.file
@@ -25,13 +24,35 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+# SSH connection aliases
+alias ssh-work='ssh 166.70.196.34'
+alias sftp-work='sftp 166.70.196.34'
+
+# Quicker nav around a mac
+alias downloads='cd ~/Downloads/'
+alias docs='cd ~/Documents/'
+alias projects='cd ~/Documents/Czar\ Theory\ Projects/'
+alias ldschurch='cd ~/Documents/ldsChurch/'
+alias bashrc='vim ~/.bashrc; source ~/.bashrc'
+alias poop='say fartt fartt poop poop fartt'
+alias vimrc='vim ~/.vimrc'
+alias pache='sudo apachectl restart'
+
+# Hide & show hidden files
+alias showHidden="defaults write com.apple.finder AppleShowAllFiles ON; killall Finder"
+alias hideHidden="defaults write com.apple.finder AppleShowAllFiles OFF; killall Finder"
+
 # Misc Variables
 export EDITOR=vim
 export LC_ALL=en_US.utf-8
 export LANG="$LC_ALL"
 
 # Add helpers
+source ~/.bashrc.local
 source ~/.git-completion.bash
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWUNTRACTEDFILES=1
 
 # Colors
 Black="$(tput setaf 0)"
@@ -43,7 +64,7 @@ White="$(tput bold ; tput setaf 7)"
 Red="$(tput setaf 1)"
 RedBG="$(tput setab 1)"
 LightRed="$(tput bold ; tput setaf 1)"
-Green="$(tput setaf 2)"
+Green="$(tput dim ; tput setaf 2)"
 GreenBG="$(tput setab 2)"
 LightGreen="$(tput bold ; tput setaf 2)"
 Brown="$(tput setaf 3)"
@@ -59,6 +80,7 @@ Cyan="$(tput setaf 6)"
 CyanBG="$(tput setab 6)"
 LightCyan="$(tput bold ; tput setaf 6)"
 NC="$(tput sgr0)"       # No Color
+TestColor="$(tput bold ; tput setaf 2)"
 
 #History Handling
 export HISTCONTROL=erasedups
@@ -66,7 +88,8 @@ export HISTSIZE=100
 shopt -s histappend
 
 # Fancy bash
-PS1='\n\[$Cyan\]\u \[$Red\]|\[$Brown\] \w\[$Red\] |\[$NC\] '
+#PS1='\n\[$Cyan\]\u \[$Pink\]|\[$Green\] \w$(__git_ps1 " \[$TestColor\](%s\[$TestColor\])")\[$Red\] |\[$NC\] '
+source /Library/Python/2.7/site-packages/powerline/bindings/bash/powerline.sh
 
 # use yellow for directories
 export CLICOLOR=1
