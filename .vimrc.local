@@ -1,0 +1,64 @@
+"I want bash, not sh
+if !WINDOWS()
+    set shell=/bin/bash
+endif
+
+"Easier escapes to keep us on home-row
+imap jj <esc>
+imap kk <esc>
+imap hh <esc>
+imap lll <esc>
+imap bbb <esc>
+
+"Easier moving/resizing in windows
+map <leader>j <C-W>j
+map <leader>k <C-W>k
+map <leader>l <C-W>l
+map <leader>h <C-W>h
+map <silent> <C-J> :res +3<cr>
+map <silent> <C-k> :res -3<cr>
+map <silent> <C-l> <C-W>8>
+map <silent> <C-h> <C-W>8<
+
+"Tab Navigation
+map <silent> <C-o> :tabnext<cr>
+map <silent> <C-i> :tabprevious<cr>
+map <silent> <C-t> :tabnew<cr>
+
+" Break line under cursor (similar to 'J' key to join lines)
+map K i<CR><Esc>
+
+" Kill unnamed yank mapping to clipboard
+set clipboard=exclude:.*
+
+" ENOUGH OF THE FOLDING ALREADY!!!
+set nofoldenable                " disable code folding
+let g:DisableAutoPHPFolding = 1 " disable PIV's folding
+
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=grey30 ctermbg=234
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=grey25 ctermbg=236
+
+" Turn off visual shifting.
+vnoremap < <
+vnoremap > >
+
+" Vim autoclose off for "
+let g:autoclose_vim_commentmode = 1
+
+"EasyMotion coloring
+hi link EasyMotionTarget ErrorMsg
+hi link EasyMotionShade  Comment
+
+
+"Signify Options
+let g:signify_vcs_list = [ 'git' ]
+let g:signify_sign_add               = '+'
+let g:signify_sign_change            = '•'
+let g:signify_sign_delete            = '-'
+
+"Airline Options
+let g:airline#extensions#hunks#enabled = 1
+let g:airline#extensions#hunks#non_zero_only = 1
+let g:airline#extensions#hunks#hunk_symbols = ['+', '•', '-']
+let g:airline_section_x = airline#section#create_right(['filetype'])

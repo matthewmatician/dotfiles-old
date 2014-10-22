@@ -1,9 +1,0 @@
-*
-!.gitignore
-!.bashrc
-!.gitconfig
-!.mrl37-vim
-!.git-completion.bash
-!.bash_profile
-!.remap.xml
-!edithosts.sh
