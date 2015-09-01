@@ -86,6 +86,16 @@
             KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L,
             KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L
         </autogen>
+        <autogen>
+            __KeyToKey__
+            KeyCode::J, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L,
+            KeyCode::TAB, ModifierFlag::CONTROL_L
+        </autogen>
+        <autogen>
+            __KeyToKey__
+            KeyCode::K, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L,
+            KeyCode::TAB, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L
+        </autogen>
         <!-- I don't know why these don't work
         <autogen>
             __KeyToKey__

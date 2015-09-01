@@ -37,6 +37,7 @@ alias bashrc='vim ~/.bashrc; source ~/.bashrc'
 alias poop='say fartt fartt poop poop fartt'
 alias vimrc='vim ~/.vimrc'
 alias pache='sudo apachectl restart'
+alias preview='open -a Preview'
 
 # Hide & show hidden files
 alias showHidden="defaults write com.apple.finder AppleShowAllFiles ON; killall Finder"
@@ -96,3 +97,6 @@ export CLICOLOR=1
 export LSCOLORS=dxDxfxfxcxegedchchDeDx
 #export LSCOLORS=ex fx cx dx bx eg ed ab ag ac ad
 
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
