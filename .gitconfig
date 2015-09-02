@@ -1,11 +1,9 @@
 [user]
 	name = Matthew Larson
-	email = matthew@czarTheory.com
+	email = matthewmatician@gmail.com
 [core]
 	editor = vim
 [merge]
 	tool = vimdiff
-[gui]
-	recentrepo = /Users/matthew/Documents/NetformBetaComplete/netform_app
 [color]
 	ui = true
