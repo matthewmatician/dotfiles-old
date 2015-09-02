@@ -128,5 +128,3 @@ alias preview='open -a Preview'
 # Hide & show hidden files
 alias showHidden="defaults write com.apple.finder AppleShowAllFiles ON; killall Finder"
 alias hideHidden="defaults write com.apple.finder AppleShowAllFiles OFF; killall Finder"
-
-source ~/.bash_profile
