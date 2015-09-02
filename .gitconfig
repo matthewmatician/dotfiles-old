@@ -9,5 +9,3 @@
 	recentrepo = /Users/matthew/Documents/NetformBetaComplete/netform_app
 [color]
 	ui = true
-[push]
-	default = simple
