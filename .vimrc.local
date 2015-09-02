@@ -67,6 +67,7 @@ let g:airline_section_x = airline#section#create_right(['filetype'])
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
 "Color Scheme
+"let g:solarized_termcolors=256
 colorscheme solarized
 set background=dark
 

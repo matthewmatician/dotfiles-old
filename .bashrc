@@ -1,6 +1,6 @@
 # Aliases
-alias ls='ls -AFGhs'
-alias ll='ls -aGsl'
+alias ls='ls -AFGhs --color'
+alias ll='ls -aGsl --color'
 alias cd..='cd ..'
 alias ..='cd ..'
 alias ldir='ls | egrep "/"'
@@ -56,6 +56,11 @@ export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACTEDFILES=1
 
 # Colors
+if [ "$TERM" == "xterm" ]; then
+    # No it isn't, it's gnome-terminal
+    export TERM=xterm-256color
+fi
+
 Black="$(tput setaf 0)"
 BlackBG="$(tput setab 0)"
 DarkGrey="$(tput bold ; tput setaf 0)"
@@ -89,12 +94,13 @@ export HISTSIZE=100
 shopt -s histappend
 
 # Fancy bash
-#PS1='\n\[$Cyan\]\u \[$Pink\]|\[$Green\] \w$(__git_ps1 " \[$TestColor\](%s\[$TestColor\])")\[$Red\] |\[$NC\] '
-source /Library/Python/2.7/site-packages/powerline/bindings/bash/powerline.sh
+PS1='\n\[$Cyan\]\u \[$Red\]|\[$Green\] \w$(__git_ps1 " \[$TestColor\](%s\[$TestColor\])")\[$Red\] |\[$NC\] '
+#source /Library/Python/2.7/site-packages/powerline/bindings/bash/powerline.sh
 
 # use yellow for directories
 export CLICOLOR=1
-export LSCOLORS=dxDxfxfxcxegedchchDeDx
+#export LSCOLORS=dxDxfxfxcxegedchchDeDx
+export LSCOLORS=exfxcxdxbxegedabagacad
 #export LSCOLORS=ex fx cx dx bx eg ed ab ag ac ad
 
 
