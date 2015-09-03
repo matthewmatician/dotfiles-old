@@ -99,8 +99,10 @@ PS1='\n\[$Cyan\]\u \[$Red\]|\[$Green\] \w$(__git_ps1 " \[$TestColor\](%s\[$TestC
 
 # use yellow for directories
 export CLICOLOR=1
-#export LSCOLORS=dxDxfxfxcxegedchchDeDx
-export LSCOLORS=exfxcxdxbxegedabagacad
+#export LSCOLORS=dxDxfxfxcxegedchchDeDx #MAC
+#solarized actual colors: 31, 32, 33, 31:1, 34 (blue), 36(magenta), 34;1 (purple), 91(rust), 94(purples), 
+export LS_COLORS="di=33:ln=34:so=31:pi=0:ex=32:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:" #LINUX
+#export LSCOLORS=exfxcxdxbxegedabagacad
 #export LSCOLORS=ex fx cx dx bx eg ed ab ag ac ad
 
 
